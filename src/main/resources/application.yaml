@@ -10,8 +10,12 @@ spring:
       ddl-auto: update
     defer-datasource-initialization: true
 
-    jwt:
-      public:
-        key: classpath:app.pub
-      private:
-        key: classpath:app.key
+  sql:
+    init:
+      mode: always
+
+jwt:
+  public:
+    key: classpath:app.pub
+  private:
+    key: classpath:app.key
